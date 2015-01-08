@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Email auto-login sample app</title>
+    </head>
+    <body>
+        {% if sent %}
+            <p>Email Sent!</p>
+        {% endif %}
+
+        <h1>Email auto-login sample app</h1>
+        {% if email %}
+            <p>Logged in: {{ email }}</p>
+        {% else %}
+            <p>Currently not logged in</p>
+        {% endif %}
+
+        <h2>Send email w/auto-login</h2>
+        <form action="/email" method="post">
+            <p>Email address: <input type="email" name="email"></p>
+            <input type="submit" value="Send Email">
+        </form>
+    <body>
+</html>
