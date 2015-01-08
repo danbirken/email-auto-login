@@ -26,7 +26,7 @@ class Website():
             self.sender.send(
                 request.form['email'], email_html.get_data(as_text=True)
             )
-            return utils.Redirect('/?sent=1')
+            return utils.redirect('/?sent=1')
         else:
             return email_html
 
